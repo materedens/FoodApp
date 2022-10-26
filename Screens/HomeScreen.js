@@ -43,7 +43,7 @@ const HomeScreen = ({ navigation }) => {
             </View>
             {/* category listing */}
             <View style={styles.categoryContainer}>
-                <TouchableOpacity style={styles.categoryBtn} onPress={() => { }}>
+                <TouchableOpacity style={styles.categoryBtn} onPress={() => navigation.navigate('Card Details')}>
                     <View style={styles.categoryIcon}>
                         <Ionicons name='ios-restaurant' size={30} color='#fff' />
 
@@ -98,53 +98,61 @@ const HomeScreen = ({ navigation }) => {
                     alignSelf: 'center',
                 }}> Recently Viewed </Text>
                 {/* First card */}
-                <View style={styles.card} >
-                    <View style={styles.cardImgWrapper}>
-                        <Image source={require('../assets/Swiper1.jpeg')}
-                            resizeMode='cover'
-                            style={styles.cardImg} />
+                <TouchableOpacity onPress={() => navigation.navigate('Card Details')}>
+                    <View style={styles.card} >
+                        <View style={styles.cardImgWrapper}>
+                            <Image source={require('../assets/Swiper1.jpeg')}
+                                resizeMode='cover'
+                                style={styles.cardImg} />
+                        </View>
+                        <View style={styles.cardInfo}>
+                            <Text style={styles.cardTitle}>Delicious Meals</Text>
+                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                        </View>
                     </View>
-                    <View style={styles.cardInfo}>
-                        <Text style={styles.cardTitle}>Delicious Meals</Text>
-                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
                 {/* Second Card */}
-                <View style={styles.card} >
-                    <View style={styles.cardImgWrapper}>
-                        <Image source={require('../assets/Swiper2.jpeg')}
-                            resizeMode='cover'
-                            style={styles.cardImg} />
+                <TouchableOpacity onPress={() => { }}>
+                    <View style={styles.card} >
+                        <View style={styles.cardImgWrapper}>
+                            <Image source={require('../assets/Swiper2.jpeg')}
+                                resizeMode='cover'
+                                style={styles.cardImg} />
+                        </View>
+                        <View style={styles.cardInfo}>
+                            <Text style={styles.cardTitle}>Delicious Meals</Text>
+                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                        </View>
                     </View>
-                    <View style={styles.cardInfo}>
-                        <Text style={styles.cardTitle}>Delicious Meals</Text>
-                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
                 {/* Third card */}
-                <View style={styles.card} >
-                    <View style={styles.cardImgWrapper}>
-                        <Image source={require('../assets/Swiper4.jpeg')}
-                            resizeMode='cover'
-                            style={styles.cardImg} />
+                <TouchableOpacity onPress={() => { }}>
+                    <View style={styles.card} >
+                        <View style={styles.cardImgWrapper}>
+                            <Image source={require('../assets/Swiper4.jpeg')}
+                                resizeMode='cover'
+                                style={styles.cardImg} />
+                        </View>
+                        <View style={styles.cardInfo}>
+                            <Text style={styles.cardTitle}>Delicious Meals</Text>
+                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                        </View>
                     </View>
-                    <View style={styles.cardInfo}>
-                        <Text style={styles.cardTitle}>Delicious Meals</Text>
-                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
                 {/* Fourth card */}
-                <View style={styles.card} >
-                    <View style={styles.cardImgWrapper}>
-                        <Image source={require('../assets/Swiper3.jpeg')}
-                            resizeMode='cover'
-                            style={styles.cardImg} />
+                <TouchableOpacity onPress={() => { }}>
+                    <View style={styles.card} >
+                        <View style={styles.cardImgWrapper}>
+                            <Image source={require('../assets/Swiper3.jpeg')}
+                                resizeMode='cover'
+                                style={styles.cardImg} />
+                        </View>
+                        <View style={styles.cardInfo}>
+                            <Text style={styles.cardTitle}>Delicious Meals</Text>
+                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                        </View>
                     </View>
-                    <View style={styles.cardInfo}>
-                        <Text style={styles.cardTitle}>Delicious Meals</Text>
-                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
             </ScrollView>
 
         </View>

@@ -10,6 +10,7 @@ import HomeScreen from './Screens/HomeScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 import ProfilesScreen from './Screens/ProfilesScreen';
+import CardDetails from './Screens/CardDetails';
 import OnboardingScreen from './Screens/OnboardingScreen';
 
 const Stack = createNativeStackNavigator();
@@ -62,6 +63,16 @@ const App = () => {
             tabBarLabel: 'Profile',
             tabBarIcon: ({ color }) => (
               <Icon name="ios-person" color={color} size={15} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Card Details"
+          component={CardDetails}
+          options={{
+            tabBarLabel: 'Card Details',
+            tabBarIcon: ({ color }) => (
+              <Icon name="ios-list-outline" color={color} size={15} />
             ),
           }}
         />
