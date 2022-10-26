@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 //imported screen
 import HomeScreen from './Screens/HomeScreen';
@@ -41,7 +41,7 @@ const App = () => {
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="home" color={color} size={15} />
+              <Icon name="ios-home" color={color} size={15} />
             ),
           }}
         />
@@ -51,7 +51,7 @@ const App = () => {
           options={{
             tabBarLabel: 'Details',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="bell" color={color} size={15} />
+              <Icon name="ios-notifications" color={color} size={15} />
             ),
           }}
         />
@@ -61,7 +61,7 @@ const App = () => {
           options={{
             tabBarLabel: 'Profile',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="account" color={color} size={15} />
+              <Icon name="ios-person" color={color} size={15} />
             ),
           }}
         />
@@ -71,7 +71,7 @@ const App = () => {
           options={{
             tabBarLabel: 'Settings',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="update" color={color} size={15} />
+              <Icon name="ios-settings" color={color} size={15} />
             ),
           }}
         />
