@@ -12,6 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
+// star rating
+import StarRating from '../component/StarRating';
+
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
@@ -98,61 +101,65 @@ const HomeScreen = ({ navigation }) => {
                     alignSelf: 'center',
                 }}> Recently Viewed </Text>
                 {/* First card */}
-                <TouchableOpacity onPress={() => navigation.navigate('Card Details')}>
-                    <View style={styles.card} >
-                        <View style={styles.cardImgWrapper}>
-                            <Image source={require('../assets/Swiper1.jpeg')}
-                                resizeMode='cover'
-                                style={styles.cardImg} />
-                        </View>
-                        <View style={styles.cardInfo}>
-                            <Text style={styles.cardTitle}>Delicious Meals</Text>
-                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                        </View>
+
+                <View style={styles.card} >
+                    <View style={styles.cardImgWrapper}>
+                        <Image source={require('../assets/Swiper1.jpeg')}
+                            resizeMode='cover'
+                            style={styles.cardImg} />
                     </View>
-                </TouchableOpacity>
+                    <View style={styles.cardInfo}>
+                        <Text style={styles.cardTitle}>Delicious Meals</Text>
+                        <StarRating ratings={2} reviews={99} />
+                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                    </View>
+                </View>
+
                 {/* Second Card */}
-                <TouchableOpacity onPress={() => { }}>
-                    <View style={styles.card} >
-                        <View style={styles.cardImgWrapper}>
-                            <Image source={require('../assets/Swiper2.jpeg')}
-                                resizeMode='cover'
-                                style={styles.cardImg} />
-                        </View>
-                        <View style={styles.cardInfo}>
-                            <Text style={styles.cardTitle}>Delicious Meals</Text>
-                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                        </View>
+
+                <View style={styles.card} >
+                    <View style={styles.cardImgWrapper}>
+                        <Image source={require('../assets/Swiper2.jpeg')}
+                            resizeMode='cover'
+                            style={styles.cardImg} />
                     </View>
-                </TouchableOpacity>
+                    <View style={styles.cardInfo}>
+                        <Text style={styles.cardTitle}>Delicious Meals</Text>
+                        <StarRating ratings={3} reviews={99} />
+                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                    </View>
+                </View>
+
                 {/* Third card */}
-                <TouchableOpacity onPress={() => { }}>
-                    <View style={styles.card} >
-                        <View style={styles.cardImgWrapper}>
-                            <Image source={require('../assets/Swiper4.jpeg')}
-                                resizeMode='cover'
-                                style={styles.cardImg} />
-                        </View>
-                        <View style={styles.cardInfo}>
-                            <Text style={styles.cardTitle}>Delicious Meals</Text>
-                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                        </View>
+
+                <View style={styles.card} >
+                    <View style={styles.cardImgWrapper}>
+                        <Image source={require('../assets/Swiper4.jpeg')}
+                            resizeMode='cover'
+                            style={styles.cardImg} />
                     </View>
-                </TouchableOpacity>
+                    <View style={styles.cardInfo}>
+                        <Text style={styles.cardTitle}>Delicious Meals</Text>
+                        <StarRating ratings={4} reviews={99} />
+                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                    </View>
+                </View>
+
                 {/* Fourth card */}
-                <TouchableOpacity onPress={() => { }}>
-                    <View style={styles.card} >
-                        <View style={styles.cardImgWrapper}>
-                            <Image source={require('../assets/Swiper3.jpeg')}
-                                resizeMode='cover'
-                                style={styles.cardImg} />
-                        </View>
-                        <View style={styles.cardInfo}>
-                            <Text style={styles.cardTitle}>Delicious Meals</Text>
-                            <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
-                        </View>
+
+                <View style={styles.card} >
+                    <View style={styles.cardImgWrapper}>
+                        <Image source={require('../assets/Swiper3.jpeg')}
+                            resizeMode='cover'
+                            style={styles.cardImg} />
                     </View>
-                </TouchableOpacity>
+                    <View style={styles.cardInfo}>
+                        <Text style={styles.cardTitle}>Delicious Meals</Text>
+                        <StarRating ratings={4} reviews={99} />
+                        <Text style={styles.cardDetails}>Amazing and delicious meals available here.</Text>
+                    </View>
+                </View>
+
             </ScrollView>
 
         </View>
